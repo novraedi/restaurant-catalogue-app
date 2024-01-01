@@ -7,16 +7,16 @@
 </head>
 <body>
   <a href="#restaurant" class="skip-to-content">Skip To Content</a>
-  <header>
-    <h1 class="logo" aria-label="Restaurant App Logo" tabindex="0">Restaurant</h1>
-    <nav>
+  <header class="header">
+    <h1 class="header__logo" aria-label="Restaurant App Logo" tabindex="0">Restaurant</h1>
+    <nav class="header__nav">
       <ul class="nav-list">
-        <li class="nav-item"><a href="#Home">Home</a></li>
-        <li class="nav-item"><a href="#">Favorite</a></li>
-        <li class="nav-item"><a href="https://github.com/novraedi" target="_blank">About Us</a></li>
+        <li class="nav-list__item"><a href="#Home">Home</a></li>
+        <li class="nav-list__item"><a href="#">Favorite</a></li>
+        <li class="nav-list__item"><a href="https://github.com/novraedi" target="_blank">About Us</a></li>
       </ul>
     </nav>
-    <button class="hamburger" aria-label="hamburger button">
+    <button class="header__hamburger" aria-label="hamburger button">
       <span></span>
       <span></span>
       <span></span>
@@ -25,16 +25,16 @@
   
   <main>
     <!-- hero -->
-    <section id="Home">
+    <section id="Home" class="hero">
       <img 
       src="/images/heros/hero-image_4.jpg" 
       alt="Bread Rolls"
-      class="hero-image">
+      class="hero__image">
     </section>
   
     <!-- Restaurant -->
-    <section id="restaurant">
-      <h2 tabindex="0">Explore Restaurant</h2>
+    <section id="restaurant" class="restaurant">
+      <h2 tabindex="0" class="restaurant__heading">Explore Restaurant</h2>
       <div class="restaurant-list">
         
       </div>
@@ -42,8 +42,8 @@
   </main>
 
   <!-- footer -->
-  <footer>
-    <p tabindex="0">copyright &#169 2023 - Restaurant Apps</p>
+  <footer class="footer">
+    <p tabindex="0" class="footer__copyright">copyright &#169 2023 - Restaurant Apps</p>
   </footer>
 </body>
 </html>
