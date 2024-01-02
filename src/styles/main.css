@@ -84,6 +84,7 @@ body {
   display: none;
   min-width: 44px;
   min-height: 44px;
+  cursor: pointer;
 }
 
 .header__hamburger span {
@@ -96,17 +97,17 @@ body {
   display: block;
 }
 
-.clicked span:nth-child(1) {
+.header__hamburger--clicked span:nth-child(1) {
   transform: rotate(45deg);
   transform-origin: 0 0;
 }
 
-.clicked span:nth-child(2) {
+.header__hamburger--clicked span:nth-child(2) {
   transform: scale(0);
   opacity: 0;
 }
 
-.clicked span:nth-child(3) {
+.header__hamburger--clicked span:nth-child(3) {
   transform: rotate(-45deg);
   transform-origin: 0 100%;
 }
@@ -160,61 +161,6 @@ body {
   margin-bottom: 4rem;
 }
 
-.restaurant-list {
-  display: grid;
-  gap: 16px;
-  padding: 32px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.restaurant-item {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 5px 5px 3px 3px;
-  margin-bottom: 1em;
-  position: relative;
-  overflow: hidden;
-}
-
-.restaurant-item__img {
-  width: 100%;
-  height: 20rem;
-  background-size: cover;
-  background-image: url('../public/images/heros/hero-image_2.jpg');
-}
-
-.restaurant-item__body {
-  text-align: left;
-  padding: 15px 20px;
-}
-
-.restaurant-item__city {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  padding: 10px 20px;
-  background-color: white;
-  color: black;
-  font-weight: bold;
-  box-shadow: inset -1px 0 4px 0 rgba(0, 0, 0, 0.2);
-}
-
-.restaurant-item__rating {
-  font-size: 16px;
-  margin-bottom: 1em;
-}
-
-.restaurant-item__name {
-  font-size: 30px;
-  margin-bottom: 0.5em;
-}
-
-.restaurant-item__description,
-.restaurant-item__city {
-  line-height: 1.5em;
-  font-size: 16px;
-}
-
 /* footer */
 
 .footer {
@@ -242,10 +188,6 @@ body {
     padding: 30px 70px;
     text-align: center;
     font-size: 1rem;
-  }
-
-  .nav-list__item a:after {
-    transition: 0s;
   }
 
   .nav-list--active {
