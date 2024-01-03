@@ -1,18 +1,18 @@
-import './restaurant-item'
+import './restaurant-item';
 
-class RestaurantList extends HTMLElement{
-    constructor(){
-        super()
-        this.shadowDom = this.attachShadow({mode: 'open'})
-    }
-    set restaurants(restaurants){
-        console.log(restaurants)
-        this._restaurants = restaurants
-        this.render()
-    }
+class RestaurantList extends HTMLElement {
+  constructor() {
+    super();
+    this.shadowDom = this.attachShadow({ mode: 'open' });
+  }
 
-    render(){
-        this.shadowDom.innerHTML = `
+  set restaurants(restaurants) {
+    this._restaurants = restaurants;
+    this.render();
+  }
+
+  render() {
+    this.shadowDom.innerHTML = `
         <style>
             :host{
                 display: grid;
@@ -35,13 +35,13 @@ class RestaurantList extends HTMLElement{
                 }
               }
         </style>
-        `
-        this._restaurants.forEach((restaurant) => {
-            const restaurantItem = document.createElement('restaurant-item')
-            restaurantItem.restaurant = restaurant
-            this.shadowDom.appendChild(restaurantItem)
-        })
-    }
+        `;
+    this._restaurants.forEach((restaurant) => {
+      const restaurantItem = document.createElement('restaurant-item');
+      restaurantItem.restaurant = restaurant;
+      this.shadowDom.appendChild(restaurantItem);
+    });
+  }
 }
 
-customElements.define('restaurant-list', RestaurantList)
+customElements.define('restaurant-list', RestaurantList);

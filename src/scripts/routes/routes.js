@@ -1,8 +1,8 @@
-import Home from "../views/pages/home"
+import Home from '../views/pages/home';
 
 const routes = {
-    '/': Home,
-    '/home': Home
-}
+  '/': Home,
+  '/home': Home,
+};
 
-export default routes
+export default routes;
