@@ -1,3 +1,6 @@
+/* eslint-disable no-param-reassign */
+import RestaurantsAPI from '../../data/RestaurantsAPI';
+
 const Home = {
   async render() {
     return `
@@ -19,9 +22,12 @@ const Home = {
 
   async afterRender() {
     const restaurantList = document.querySelector('restaurant-list');
-    const restaurantsData = await fetch('/data/DATA.json');
-    const restaurantDataJson = await restaurantsData.json();
-    restaurantList.restaurants = restaurantDataJson.restaurants;
+    const restaurantsData = await RestaurantsAPI.listAllRestaurant();
+    await Promise.all(restaurantsData.map(async (restaurant) => {
+      const imageUrl = await RestaurantsAPI.imageRestaurant(restaurant.pictureId);
+      restaurant.image = imageUrl;
+    }));
+    restaurantList.restaurants = restaurantsData;
   },
 };
 

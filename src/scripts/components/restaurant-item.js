@@ -71,7 +71,7 @@ class RestaurantItem extends HTMLElement {
             }
           }
         </style>
-            <img src="${this._restaurant.pictureId}" alt="${this._restaurant.name}" class="restaurant-item__img">
+            <img src="${this._restaurant.image}" alt="${this._restaurant.name}" class="restaurant-item__img">
             <div class="restaurant-item__content">
                 <p class="restaurant-item__rating">Rating: ${this._restaurant.rating}</p>
                 <h3 class="restaurant-item__name">${this._restaurant.name}</h3>
