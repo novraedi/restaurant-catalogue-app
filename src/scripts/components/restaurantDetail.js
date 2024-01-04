@@ -17,7 +17,7 @@ class RestaurantDetail extends HTMLElement {
         <style>
           :host{
             width: 100%;
-            display: grid;
+            display: block;
             max-width: 800px;
             margin: auto !important;
             padding: 6rem 40px !important;
@@ -86,12 +86,12 @@ class RestaurantDetail extends HTMLElement {
           }
 
           .restaurant__reviews.restaurant__reviews--show{
-            display: grid;
-            gap: 20px;
+            display: block;
           }
 
           .reviewer__list{
             display: grid;
+            gap: 15px;
           }
 
           .reviewer__item{
@@ -134,6 +134,10 @@ class RestaurantDetail extends HTMLElement {
               grid-column-end: 3;
               grid-template-columns: 1fr 1fr;
               gap: 15px;
+            }
+
+            .restaurant__reviews.restaurant__reviews--show{
+              display: grid;
             }
 
             .reviewer__list{
