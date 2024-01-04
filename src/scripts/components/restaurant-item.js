@@ -52,6 +52,15 @@ class RestaurantItem extends HTMLElement {
             font-size: 30px;
             margin-bottom: 0.5em;
           }
+
+          .restaurant-item__name a{
+            color: black;
+            text-decoration: none;
+          }
+
+          .restaurant-item__name:hover a{
+            text-decoration: underline;
+          }
           
           .restaurant-item__description,
           .restaurant-item__city {
@@ -74,7 +83,7 @@ class RestaurantItem extends HTMLElement {
             <img src="${this._restaurant.image}" alt="${this._restaurant.name}" class="restaurant-item__img">
             <div class="restaurant-item__content">
                 <p class="restaurant-item__rating">Rating: ${this._restaurant.rating}</p>
-                <h3 class="restaurant-item__name">${this._restaurant.name}</h3>
+                <h3 class="restaurant-item__name"><a href="/#/detail/${this._restaurant.id}">${this._restaurant.name}</a></h3>
                 <p class="restaurant-item__description">${this._restaurant.description}</p>
                 <p class="restaurant-item__city">${this._restaurant.city}</p>
             </div>

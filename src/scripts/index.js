@@ -2,6 +2,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import './components/restaurant-item';
 import './components/restaurant-list';
+import './components/restaurantDetail';
 import App from './views/app';
 
 const app = new App({

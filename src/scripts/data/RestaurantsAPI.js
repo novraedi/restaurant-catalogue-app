@@ -12,6 +12,26 @@ class RestaurantsAPI {
     const imageBlob = await response.blob();
     return URL.createObjectURL(imageBlob);
   }
+
+  static async detailRestaurant(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL(id));
+    const responseJson = await response.json();
+    return responseJson.restaurant;
+  }
+
+  static async addReviewRestaurant({ id, name, review }) {
+    const data = { id, name, review };
+    const response = await fetch(API_ENDPOINT.REVIEW, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    const responseJson = await response.json();
+    return responseJson;
+  }
 }
 
 export default RestaurantsAPI;
