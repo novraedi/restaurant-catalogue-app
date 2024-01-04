@@ -4,6 +4,7 @@ import './components/restaurant-item';
 import './components/restaurant-list';
 import './components/restaurantDetail';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   header: document.querySelector('.header'),
@@ -19,6 +20,7 @@ window.addEventListener('hashchange', () => {
   app.renderPage();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   app.renderPage();
+  await swRegister();
 });
