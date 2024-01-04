@@ -8,7 +8,16 @@
 <body>
   <a href="#restaurant" class="skip-to-content">Skip To Content</a>
   <header class="header">
-    <h1 class="header__logo" aria-label="Restaurant App Logo" tabindex="0">Restaurant</h1>
+    <h1 class="header__logo" aria-label="Restaurant App Logo" tabindex="0"><a href="/#/home">Restaurant</a></h1>
+    <form class="header__search">
+      <input 
+      type="text" 
+      placeholder="Looking for restaurant?"
+      class="search__input">
+      <button 
+      type="submit"
+      class="search__submitBtn">Search</button>
+    </form>
     <nav class="header__nav">
       <ul class="nav-list">
         <li class="nav-list__item"><a href="#/Home">Home</a></li>

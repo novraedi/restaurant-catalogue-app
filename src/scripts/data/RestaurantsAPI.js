@@ -32,6 +32,12 @@ class RestaurantsAPI {
     const responseJson = await response.json();
     return responseJson;
   }
+
+  static async searchRestaurant(keyword) {
+    const response = await fetch(API_ENDPOINT.SEARCH(keyword));
+    const responseJson = await response.json();
+    return responseJson.restaurants;
+  }
 }
 
 export default RestaurantsAPI;
