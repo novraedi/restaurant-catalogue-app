@@ -7,6 +7,7 @@ import './components/like-button';
 import './components/liked-button';
 import App from './views/app';
 import swRegister from './utils/sw-register';
+import Loading from './utils/loading';
 
 const app = new App({
   header: document.querySelector('.header'),
@@ -19,10 +20,16 @@ const app = new App({
 });
 
 window.addEventListener('hashchange', () => {
+  Loading.init(
+    document.querySelector('.spinner'),
+  );
   app.renderPage();
 });
 
 window.addEventListener('load', async () => {
+  Loading.init(
+    document.querySelector('.spinner'),
+  );
   app.renderPage();
   await swRegister();
 });

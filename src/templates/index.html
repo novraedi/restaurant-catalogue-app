@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="theme-color" content="#FFFFFF"/>
+  <link rel="manifest" href="./app.webmanifest">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
   <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
   <title>Restaurant App</title>
 </head>
 <body>
   <a href="#restaurant" class="skip-to-content">Skip To Content</a>
+  <div class="spinner">
+    <div class="spinner__item">
+      <img src="./icons/icon-192x192.png" alt="loadingSpinner">
+    </div>
+  </div>
   <header class="header">
-    <h1 class="header__logo" aria-label="Restaurant App Logo" tabindex="0"><a href="/#/home">Restaurant</a></h1>
+    <h1 class="header__logo" aria-label="Restaurant App Logo" tabindex="0"><a aria-hidden="true" href="/#/home">Restaurant</a></h1>
     <form class="header__search">
       <input 
       type="text" 
