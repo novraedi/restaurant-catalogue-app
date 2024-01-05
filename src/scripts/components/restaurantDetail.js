@@ -55,9 +55,11 @@ class RestaurantDetail extends HTMLElement {
           }
 
           #inputReviews__name{
-            padding: 10px;
+            padding: 0 10px;
             border: 1px solid rgba(0,0,0,.5);
             border-radius: 10px;
+            min-width: 44px;
+            min-height: 44px;
           }
 
           #inputReviews__review{
@@ -79,6 +81,8 @@ class RestaurantDetail extends HTMLElement {
             border-radius: 10px;
             cursor: pointer;
             margin: 10px 0;
+            min-width: 44px;
+            min-height: 44px;
           }
 
           .restaurant__reviews{

@@ -56,6 +56,10 @@ class RestaurantItem extends HTMLElement {
           .restaurant-item__name a{
             color: black;
             text-decoration: none;
+            display: block;
+            line-height: 44px;
+            min-width: 44px;
+            min-height: 44px;
           }
 
           .restaurant-item__name:hover a{
