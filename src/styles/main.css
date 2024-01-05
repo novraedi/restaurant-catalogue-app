@@ -21,6 +21,10 @@ a{
   color: black;
 }
 
+li{
+  list-style-type: none;
+}
+
 /* skip to content button */
 .skip-to-content {
   position: absolute;
@@ -154,7 +158,8 @@ a{
   z-index: 999;
 }
 
-#Search{
+#Search,
+#Favorite{
   padding: 10rem 0;
 }
 
@@ -210,6 +215,26 @@ a{
 
 .restaurant__heading {
   margin-bottom: 4rem;
+}
+
+/* like */
+
+.likeButtonContainer{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.like,
+.liked{
+  width: 55px;
+  height: 55px;
+  background-color: black;
+  border: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
 }
 
 /* footer */

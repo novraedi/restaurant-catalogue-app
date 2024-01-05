@@ -3,6 +3,8 @@ import '../styles/main.css';
 import './components/restaurant-item';
 import './components/restaurant-list';
 import './components/restaurantDetail';
+import './components/like-button';
+import './components/liked-button';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
