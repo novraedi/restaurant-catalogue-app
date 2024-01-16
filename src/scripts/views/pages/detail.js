@@ -1,7 +1,8 @@
 /* eslint-disable no-param-reassign */
 import RestaurantsAPI from '../../data/RestaurantsAPI';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 
 const Detail = {
   async render() {
@@ -21,7 +22,7 @@ const Detail = {
     restaurantData.image = imageUrl;
     restaurantDetail.restaurant = restaurantData;
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('.likeButtonContainer'),
       restaurant: {
         id: restaurantData.id,
@@ -31,6 +32,7 @@ const Detail = {
         rating: restaurantData.rating,
         pictureId: restaurantData.pictureId,
       },
+      favoriteRestaurants: FavoriteRestaurantIdb,
     });
   },
 };
