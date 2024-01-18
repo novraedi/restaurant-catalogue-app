@@ -216,7 +216,6 @@ li{
 }
 
 .hero__image {
-  height: 540px;
   width: 100%;
   object-fit: cover;
   object-position: 25% 80%;
@@ -310,6 +309,20 @@ li{
   background: black;
   color: white;
   text-align: center;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+
 }
 
 @media screen and (min-width:576px) {

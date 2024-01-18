@@ -9,7 +9,9 @@ const Home = {
         <img 
         src="/images/heros/hero-image_4.jpg" 
         alt="Bread Rolls"
-        class="hero__image">
+        class="hero__image skeleton"
+        height="540"
+        width="1340">
         </section>
     
         <!-- Restaurant -->
