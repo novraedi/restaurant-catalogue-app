@@ -2,6 +2,25 @@
 import RestaurantsAPI from '../../data/RestaurantsAPI';
 
 const Home = {
+  skeletonLoad() {
+    return `
+        <!-- hero -->
+        <section id="Home" class="hero">
+        <img 
+        src="/images/heros/hero-image_4.jpg" 
+        alt="Bread Rolls"
+        class="hero__image skeleton"
+        height="540"
+        width="1340">
+        </section>
+    
+        <!-- Restaurant -->
+        <section id="restaurant" class="restaurant">
+        <h2 tabindex="0" class="restaurant__heading">Explore Restaurant</h2>
+        <restaurant-list></restaurant-list>
+        </section>
+        `;
+  },
   async render() {
     return `
         <!-- hero -->
@@ -9,7 +28,9 @@ const Home = {
         <img 
         src="/images/heros/hero-image_4.jpg" 
         alt="Bread Rolls"
-        class="hero__image">
+        class="hero__image skeleton"
+        height="540"
+        width="1340">
         </section>
     
         <!-- Restaurant -->

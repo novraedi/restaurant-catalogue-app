@@ -48,7 +48,8 @@ li{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 25px;
+  padding: 0 25px;
+  height: 90px;
   position: absolute;
   top: 0;
 }
@@ -206,17 +207,13 @@ li{
 
 /* mainContent */
 #mainContent{
+  padding-top: 8rem;
   min-height: calc(100vh - 158px);
 }
 
 /* hero */
 
-.hero {
-  margin-top: 8rem;
-}
-
 .hero__image {
-  height: 540px;
   width: 100%;
   object-fit: cover;
   object-position: 25% 80%;
@@ -305,11 +302,30 @@ li{
 /* footer */
 
 .footer {
-  margin-top: 5em;
-  padding: 30px;
+  margin-top: 5rem;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  align-items: center;
   background: black;
   color: white;
   text-align: center;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+
 }
 
 @media screen and (min-width:576px) {
@@ -328,7 +344,7 @@ li{
 
 @media screen and (min-width:768px) {
   .header{
-    padding: 20px 40px;
+    padding: 0 40px;
   }
   .header__logo{
     font-size: 24px;

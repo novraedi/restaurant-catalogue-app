@@ -2,6 +2,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import './components/restaurant-item';
 import './components/restaurant-list';
+import './components/restaurant-skeleton';
 import './components/restaurantDetail';
 import './components/like-button';
 import './components/liked-button';
@@ -25,6 +26,8 @@ window.addEventListener('hashchange', () => {
   );
   app.renderPage();
 });
+
+app.renderSkeletonLoad()
 
 window.addEventListener('load', async () => {
   Loading.init(

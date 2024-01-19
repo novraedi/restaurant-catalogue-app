@@ -22,7 +22,6 @@ class RestaurantItem extends HTMLElement {
           
           .restaurant-item__img {
             width: 100%;
-            height: 20rem;
             background-size: cover;
           }
           
@@ -70,6 +69,12 @@ class RestaurantItem extends HTMLElement {
           .restaurant-item__city {
             line-height: 1.5em;
             font-size: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 150px;
           }
 
           @media screen and (min-width:768px) {
@@ -84,7 +89,7 @@ class RestaurantItem extends HTMLElement {
             }
           }
         </style>
-            <img src="${this._restaurant.image}" alt="${this._restaurant.name}" class="restaurant-item__img">
+            <img src="${this._restaurant.image}" alt="${this._restaurant.name}" class="restaurant-item__img" height="320" width="400">
             <div class="restaurant-item__content">
                 <p class="restaurant-item__rating">Rating: ${this._restaurant.rating}</p>
                 <h3 class="restaurant-item__name"><a href="/#/detail/${this._restaurant.id}">${this._restaurant.name}</a></h3>

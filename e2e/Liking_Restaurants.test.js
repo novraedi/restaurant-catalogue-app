@@ -1,10 +1,24 @@
+const assert = require('assert');
+
 Feature('Liking Restaurants');
 
 Scenario('liking one restaurant', async ({ I }) => {
   I.amOnPage('/');
 
-  I.wait(15);
+  I.wait(5);
 
-  I.seeElement({shadow: ['restaurant-list', 'restaurant-item', 'restaurant-item__content', 'restaurant__name', 'a']});
-  const firstRestaurant = locate({shadow: ['restaurant-list', 'restaurant-item', 'restaurant-item__content', 'restaurant__name', 'a']});
+  I.seeElement('.restaurant-item__name a');
+  const firstRestaurant = locate('.restaurant-item__name a').first();
+  const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
+  I.click(firstRestaurant);
+
+  I.seeElement('like-button');
+  I.click('like-button');
+
+  I.amOnPage('/#/Favorite');
+
+  I.seeElement('restaurant-item');
+  const likedRestaurantTitle = await I.grabTextFrom('.restaurant-item__name a');
+
+  assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
 });

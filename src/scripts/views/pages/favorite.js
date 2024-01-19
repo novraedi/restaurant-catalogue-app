@@ -13,6 +13,10 @@ const Favorite = {
 
   async afterRender() {
     const restaurantsData = await FavoriteRestaurantIdb.getAllRestaurants();
+    if (!restaurantsData.length) {
+      document.querySelector('.favorite').innerHTML = '';
+      return;
+    }
     const restaurantList = document.querySelector('restaurant-list');
     await Promise.all(restaurantsData.map(async (restaurant) => {
       const imageUrl = await RestaurantsAPI.imageRestaurant(restaurant.pictureId);
