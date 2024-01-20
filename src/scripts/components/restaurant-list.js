@@ -4,12 +4,24 @@ class RestaurantList extends HTMLElement {
     this.render();
   }
 
+  connectedCallback() {
+    this.renderSkeleton();
+  }
+
+  renderSkeleton() {
+    const skeletonHTML = Array(10).fill('<restaurant-skeleton></restaurant-skeleton>').join('');
+    this.innerHTML = skeletonHTML;
+  }
+
   render() {
-    this._restaurants.forEach((restaurant) => {
-      const restaurantItem = document.createElement('restaurant-item');
-      restaurantItem.restaurant = restaurant;
-      this.appendChild(restaurantItem);
-    });
+    if (this._restaurants && this._restaurants.length > 0) {
+      this.innerHTML = '';
+      this._restaurants.forEach((restaurant) => {
+        const restaurantItem = document.createElement('restaurant-item');
+        restaurantItem.restaurant = restaurant;
+        this.appendChild(restaurantItem);
+      });
+    }
   }
 }
 

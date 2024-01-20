@@ -2,12 +2,13 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-import '../styles/main.css';
 import './components/restaurant-item';
 import './components/restaurant-list';
 import './components/restaurantDetail';
+import './components/restaurant-skeleton';
 import './components/like-button';
 import './components/liked-button';
+import '../styles/main.css';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 import Loading from './utils/loading';

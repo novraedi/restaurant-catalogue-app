@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FFFFFF"/>
+  <meta name="description" content="Restaurant Catalogue">
   <link rel="manifest" href="./app.webmanifest">
   <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+  <link rel="preload" 
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+  as="style"
+  onload="this.onload=null"
+  this.rel="stylesheet" 
+  crossorigin="anonymous">
   <title>Restaurant App</title>
 </head>
 <body>
@@ -17,7 +23,7 @@
     </div>
   </div>
   <header class="header">
-    <h1 class="header__logo" aria-label="Restaurant App Logo" tabindex="0"><a aria-hidden="true" href="/#/home">Restaurant</a></h1>
+    <h1 class="header__logo" aria-label="Restaurant App Logo" tabindex="0"><a href="/#/home">Restaurant</a></h1>
     <form class="header__search">
       <input 
       type="text" 

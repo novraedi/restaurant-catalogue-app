@@ -172,8 +172,8 @@ class RestaurantDetail extends HTMLElement {
 
         <h2 class="restaurant__title">${this._restaurant.name}</h2>
         <img 
-        class="restaurant__poster lazyload" 
-        data-src="${this._restaurant.image}" 
+        class="restaurant__poster" 
+        src="${this._restaurant.image}" 
         alt="${this._restaurant.name}" />
         <div class="restaurant__info">
             <h3>Information</h3>
