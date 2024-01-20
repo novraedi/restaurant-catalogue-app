@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import RestaurantsAPI from '../../data/RestaurantsAPI';
-import FavoriteRestaurantIdb from '../../utils/favorite-restaurant-idb';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 
 const Favorite = {
   async render() {
