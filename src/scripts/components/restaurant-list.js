@@ -14,14 +14,12 @@ class RestaurantList extends HTMLElement {
   }
 
   render() {
-    if (this._restaurants && this._restaurants.length > 0) {
-      this.innerHTML = '';
-      this._restaurants.forEach((restaurant) => {
-        const restaurantItem = document.createElement('restaurant-item');
-        restaurantItem.restaurant = restaurant;
-        this.appendChild(restaurantItem);
-      });
-    }
+    this.innerHTML = '';
+    this._restaurants.forEach((restaurant) => {
+      const restaurantItem = document.createElement('restaurant-item');
+      restaurantItem.restaurant = restaurant;
+      this.appendChild(restaurantItem);
+    });
   }
 }
 
