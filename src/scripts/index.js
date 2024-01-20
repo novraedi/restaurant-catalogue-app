@@ -1,4 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import 'regenerator-runtime'; /* for async await transpile */
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../styles/main.css';
 import './components/restaurant-item';
 import './components/restaurant-list';

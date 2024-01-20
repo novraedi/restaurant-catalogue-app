@@ -6,10 +6,19 @@ const Home = {
     return `
         <!-- hero -->
         <section id="Home" class="hero">
-        <img 
-        src="/images/heros/hero-image_4.jpg" 
-        alt="Bread Rolls"
-        class="hero__image">
+        <picture>
+          <source media="(max-width: 425px)" srcset="./images/hero-image_4-small.jpg">
+
+          <source media="(max-width: 768px)" srcset="./images/hero-image_4-large.jpg">
+
+          <source type="image/webp" srcset="./images/hero-image_4.webp">
+
+          <img 
+          data-src="./images/hero-image_4.jpg" 
+          alt="Bread Rolls"
+          class="hero__image lazyload">
+        </picture>
+        
         </section>
     
         <!-- Restaurant -->
