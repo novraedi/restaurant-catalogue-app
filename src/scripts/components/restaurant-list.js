@@ -9,7 +9,7 @@ class RestaurantList extends HTMLElement {
   }
 
   renderSkeleton() {
-    const skeletonHTML = Array(10).fill('<restaurant-skeleton></restaurant-skeleton>').join('');
+    const skeletonHTML = Array(20).fill('<restaurant-skeleton></restaurant-skeleton>').join('');
     this.innerHTML = skeletonHTML;
   }
 

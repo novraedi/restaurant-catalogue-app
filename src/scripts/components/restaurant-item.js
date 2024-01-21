@@ -10,8 +10,7 @@ class RestaurantItem extends HTMLElement {
             data-src="${this._restaurant.image}" 
             alt="${this._restaurant.name}" 
             class="restaurant-item__img lazyload" 
-            height="320" 
-            width="400">
+            >
             <div class="restaurant-item__content">
                 <p class="restaurant-item__rating">Rating: ${this._restaurant.rating}</p>
                 <h3 class="restaurant-item__name"><a href="/#/detail/${this._restaurant.id}">${this._restaurant.name}</a></h3>
